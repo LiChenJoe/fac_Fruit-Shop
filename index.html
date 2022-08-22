@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Fruit Shop</title>
+  </head>
+  <body>
+    <header>
+      <h1>Joe's Fruit Shope</h1>
+    </header>
+    <div class="container">
+      <section class="shop">
+        <div class="card">
+          <h3 class="fruitTitle"></h3>
+          <div class="imgBox">
+            <img src="" alt="" />
+          </div>
+          <p class="price">$&nbsp;<span></span></p>
+          <div class="amountCount">
+            <button class="increase" onclick="increasePurchase(this)">+</button>
+            <p class="amount">1</p>
+            <button class="decrease" onclick="decreasePurchase(this)">-</button>
+          </div>
+          <button class="addToCart" onclick="addtoCart(this)">
+            Add to Cart
+          </button>
+        </div>
+        <div class="card">
+          <h3 class="fruitTitle"></h3>
+          <div class="imgBox">
+            <img src="" alt="" />
+          </div>
+          <p class="price">$&nbsp; <span></span></p>
+          <div class="amountCount">
+            <button class="increase" onclick="increasePurchase(this)">+</button>
+            <p class="amount">1</p>
+            <button class="decrease" onclick="decreasePurchase(this)">-</button>
+          </div>
+          <button class="addToCart" onclick="addtoCart(this)">
+            Add to Cart
+          </button>
+        </div>
+        <div class="card">
+          <h3 class="fruitTitle"></h3>
+          <div class="imgBox">
+            <img src="" alt="" />
+          </div>
+          <p class="price">$&nbsp; <span></span></p>
+
+          <div class="amountCount">
+            <button class="increase" onclick="increasePurchase(this)">+</button>
+            <p class="amount">1</p>
+            <button class="decrease" onclick="decreasePurchase(this)">-</button>
+          </div>
+          <button class="addToCart" onclick="addtoCart(this)">
+            Add to Cart
+          </button>
+        </div>
+        <div class="card">
+          <h3 class="fruitTitle"></h3>
+          <div class="imgBox">
+            <img src="" alt="" />
+          </div>
+          <p class="price">$&nbsp; <span></span></p>
+
+          <div class="amountCount">
+            <button class="increase" onclick="increasePurchase(this)">+</button>
+            <p class="amount">1</p>
+            <button class="decrease" onclick="decreasePurchase(this)">-</button>
+          </div>
+          <button class="addToCart" onclick="addtoCart(this)">
+            Add to Cart
+          </button>
+        </div>
+      </section>
+      <section class="cart">
+        <div class="cartItem">
+          <h2>Your cart</h2>
+        </div>
+        <div class="cartTotal">
+          <p>Total Price:</p>
+          <p class="cartTotalPrice"></p>
+        </div>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width:100vw;
+    height:100vh;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height:85%;
+}
+
+h1 {
+    padding: 2% 5%;
+}
+
+
+.shop {
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-right: 1px solid lightgray;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    min-width: 250px;
+    min-height: 40vh;
+    background-color: blanchedalmond;
+    margin: 1.5%;
+}
+
+h3 {
+    padding-left: 5%;
+    align-self: flex-start;
+}
+.imgBox{
+    width: 90%;
+    height: 15vh;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+}
+
+.price, span {
+    display: inline;
+}
+
+.amountCount {
+    display: flex;
+    justify-content: center;
+}
+
+.increase, .amount, .decrease {
+    display: inline-block;
+}
+
+.amount {
+    width: 30px;
+    text-align: center;
+    background-color: white;
+}
+
+
+.increase, .decrease {
+    border: none;
+    width: 30px;
+    background-color: red;
+}
+
+.addToCart {
+    padding: 2.5px 5px;
+
+}
+
+.cart {
+    width:30%;
+}
+
+.cartItem {
+    padding:30px;
+    width: 100%;
+}
+
+.cartItemStyle {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.cartItemStyle > p:nth-child(1) {
+    width: 45%;
+}
+.cartItemStyle > p:nth-child(4) {
+    width: 10%;
+    text-align: right;
+}
+
+.cartItemStyle > p:nth-child(2) {
+    text-align: right;
+}
+
+
+.cartItemStyle  > button {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+.cartItemStyle > div > button:first-child {
+    margin-right: 10px;
+}
+
+
+h2 {
+    margin-top: -15%;
+}
+
+.cartTotal {
+    display: none;
+}

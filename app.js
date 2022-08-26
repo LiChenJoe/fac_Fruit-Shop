@@ -51,17 +51,13 @@ function decreasePurchase(element) {
 }
 
 function addtoCart(element) {
-    let addFruit = element.parentElement.children[0].innerHTML;
-    console.log(addFruit);
+    let addFruitNmae = element.parentElement.children[0].innerHTML;
+    console.log(addFruitNmae);
     let addAmount= element.parentElement.children[3].children[1].innerHTML;
     console.log(addAmount, element.parentElement.children[0]);
-    if (cartTotalPrice.innerHTML===""){
-        cartTotalPrice.innerHTML= 0
-    }
     let fruitTotalPrice;
     let numberOfFruit;
     if (Number(addAmount)===0) {
-        console.log(element.parentElement);
         //element.parentElement.remove();
         return ;
     }
@@ -70,13 +66,14 @@ function addtoCart(element) {
             for (let i = 1; i <cartItem.children.length; i++) {
                 console.log(element.parentElement.children[0]);
                 console.log(cartItem.children, i);
-                if (addFruit ===cartItem.children[i].children[0].innerHTML){ 
-                    console.log(cartItem.children[i].children[cartItem.children[1].children.length-1], "here");
+                if (addFruitNmae ===cartItem.children[i].children[0].innerHTML){ 
+                    console.log(cartItem.children[i].children[cartItem.children[1].children.length-1].innerHTML, "+Number(addAmount)", Number(addAmount));
                     numberOfFruit = Number(cartItem.children[i].children[cartItem.children[1].children.length-1].innerHTML)+Number(addAmount);
                     cartItem.children[i].children[cartItem.children[1].children.length-1].innerHTML= numberOfFruit;
-                    console.log(element.parentElement.children[2].children[0].innerHTML);
-                    fruitTotalPrice=numberOfFruit* Number(element.parentElement.children[2].children[0].innerHTML);
-                    cartTotalPrice.innerHTML+=fruitTotalPrice;
+                    console.log(element.parentElement.children[2].children[0].innerHTML, "numberOfFruit", numberOfFruit);
+                    fruitTotalPrice= Number(addAmount)* Number(element.parentElement.children[2].children[0].innerHTML);
+                    console.log("cartTotalPrice.innerHTML", cartTotalPrice.innerHTML, "fruitTotalPrice", fruitTotalPrice);
+                    cartTotalPrice.innerHTML=Number(cartTotalPrice.innerHTML)+fruitTotalPrice;
                     addAmount=1;
                     element.parentElement.children[3].children[1].innerHTML=addAmount;
                     return;
@@ -92,15 +89,23 @@ function addtoCart(element) {
     let newItemName = document.createElement("p");
     let newItemAmount = document.createElement("p");
     fruitTotalPrice=addAmount* Number(element.parentElement.children[2].children[0].innerHTML);
-    newItemName.innerHTML = addFruit;
+    newItemName.innerHTML = addFruitNmae;
     newItemAmount.innerHTML = addAmount;
     increaseNewItemAmount.innerHTML= "+";
     increaseNewItemAmount.classList.add("increaseNewItemAmount");
     increaseNewItemAmount.addEventListener("click", (e)=>{
-        console.log(e.target.parentElement.children.length-1);
+        console.log(e.target.parentElement.children);
         numberOfFruit=Number(e.target.parentElement.children[3].innerHTML)+1;
+        for (let i= 0; i<fruit.length; i++) {
+            console.log(e.target.parentElement.children[0].innerHTML, fruit[i].name);
+            if (e.target.parentElement.children[0].innerHTML === fruit[i].name) {
+                fruitTotalPrice = fruit[i].price;
+                console.log(fruitTotalPrice);
+            } 
+        }
         console.log(numberOfFruit);
         e.target.parentElement.children[3].innerHTML=numberOfFruit;
+        cartTotalPrice.innerHTML= Number(cartTotalPrice.innerHTML)+Number(fruitTotalPrice); 
     })
     decreaseNewItemAmount.innerHTML ="-";
     decreaseNewItemAmount.classList.add("decreaseNewItemAmount");
@@ -110,6 +115,14 @@ function addtoCart(element) {
             numberOfFruit= Number(e.target.parentElement.children[cartItem.children[1].children.length-1].innerHTML)-1;
             console.log(numberOfFruit);
             e.target.parentElement.children[cartItem.children[1].children.length-1].innerHTML= numberOfFruit;
+            for (let i= 0; i<fruit.length; i++) {
+                console.log(e.target.parentElement.children[0].innerHTML, fruit[i].name);
+                if (e.target.parentElement.children[0].innerHTML === fruit[i].name) {
+                    fruitTotalPrice = fruit[i].price;
+                    console.log(fruitTotalPrice);
+                } 
+            }
+            cartTotalPrice.innerHTML= Number(cartTotalPrice.innerHTML)-Number(fruitTotalPrice); 
             if (Number(e.target.parentElement.children[e.target.parentElement.children.length-1].innerHTML)===0){
                 e.target.parentElement.remove();;
             }
@@ -123,7 +136,7 @@ function addtoCart(element) {
     newItem.appendChild(newItemAmount);
     cartItem.appendChild(newItem);
     console.log("fruitTotalPrice:", fruitTotalPrice, "numberOfFruit: ", numberOfFruit);
-    cartTotalPrice.innerHTML+=Number(fruitTotalPrice); 
+    cartTotalPrice.innerHTML= Number(cartTotalPrice.innerHTML)+Number(fruitTotalPrice); 
     addAmount=1;
     element.parentElement.children[3].children[1].innerHTML=addAmount;
 }

@@ -162,6 +162,8 @@ h2 {
         margin-bottom: 5%;
     }
 
+
+
     .container {
         height: 1150px;
     }
@@ -191,6 +193,12 @@ h2 {
   }
 
   @media only screen and (max-width: 600PX) {
+
+
+    h2 {
+        margin-top: -10%;
+    }
+
     
     .card {
         width: 20%;
@@ -207,7 +215,7 @@ h2 {
     }
 
     h2 {
-        font-size: 1.3em;
+        margin-top: -10%;
     }
 
     .container {
@@ -215,11 +223,11 @@ h2 {
     }
 
     .shop {
-        width: 55%;
+        width: 50%;
         height: 1100px;
     }
       .cart {
-          width: 40%;
+          width: 45%;
       }
 
     .cartItemStyle > button {

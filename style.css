@@ -13,9 +13,6 @@ body {
     margin: auto;
 }
 
-.increase, .decrease {
-    color:azure;
-}
 
 button:hover {
     cursor:pointer;
@@ -95,6 +92,7 @@ img {
     border: none;
     width: 30px;
     background-color: red;
+    color: azure;
 }
 
 .addToCart {
@@ -136,6 +134,7 @@ img {
     width: 30px;
     height: 30px;
     padding: 5px;
+    margin: 0 auto;
 }
 
 .cartItemStyle > div > button:first-child {
@@ -157,6 +156,10 @@ h2 {
 
 .cartTotal > p , .cartTotalPrice {
     display: inline-block;
+}
+
+.decreaseNewItemAmount, .decreaseNewItemAmount {
+
 }
 
 

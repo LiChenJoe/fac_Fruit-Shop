@@ -2,22 +2,22 @@
 let fruit = [
     {
         name:"Apple",
-        image:"./img/Apple.jpeg",
+        image:"https://github.com/LiChenJoe/fac_Fruit-Shop/blob/main/img/Apple.jpeg",
         price:"10",
     },
     {
         name:"Orange",
-        image:"./img/Orange.jpeg",
+        image:"https://github.com/LiChenJoe/fac_Fruit-Shop/blob/main/img/Orange.jpeg",
         price:"15",
     },
     {
         name:"Bannana",
-        image:"./img/Bannana.jpeg",
+        image:"https://github.com/LiChenJoe/fac_Fruit-Shop/blob/main/img/Bannana.jpeg",
         price:"50",
     },
     {
         name:"Watermelon",
-        image:"./img/Watermelon.jpeg",
+        image:"https://github.com/LiChenJoe/fac_Fruit-Shop/blob/main/img/Watermelon.jpeg",
         price:"100"
     },
 ]

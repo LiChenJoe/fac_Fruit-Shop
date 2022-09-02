@@ -134,7 +134,6 @@ img {
     width: 30px;
     height: 30px;
     padding: 5px;
-    margin: 0 auto;
 }
 
 .cartItemStyle > div > button:first-child {
@@ -156,10 +155,6 @@ h2 {
 
 .cartTotal > p , .cartTotalPrice {
     display: inline-block;
-}
-
-.decreaseNewItemAmount, .decreaseNewItemAmount {
-
 }
 
 
@@ -241,6 +236,7 @@ h2 {
         width: 20px;
         height: 20px;
         padding: 0;
+        text-align: center;
     }
 
     .card {

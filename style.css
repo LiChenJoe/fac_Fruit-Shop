@@ -13,6 +13,10 @@ body {
     margin: auto;
 }
 
+.increase, .decrease {
+    color:azure;
+}
+
 button:hover {
     cursor:pointer;
 }

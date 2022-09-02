@@ -2,22 +2,22 @@
 let fruit = [
     {
         name:"Apple",
-        image:"../img/Apple.jpeg",
+        image:"./img/Apple.jpeg",
         price:"10",
     },
     {
         name:"Orange",
-        image:"../img/Orange.jpeg",
+        image:"./img/Orange.jpeg",
         price:"15",
     },
     {
         name:"Bannana",
-        image:"../img/Bannana.jpeg",
+        image:"./img/Bannana.jpeg",
         price:"50",
     },
     {
         name:"Watermelon",
-        image:"../img/Watermelon.jpeg",
+        image:"./img/Watermelon.jpeg",
         price:"100"
     },
 ]
